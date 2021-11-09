@@ -1,0 +1,43 @@
+{
+	"name": "replit-protocol-conman",
+	"version": "0.0.1-beta.1",
+	"description": "A conman client for Replit. Allows access to the Replit protocol via CLI using the Crosis client.",
+	"sideEffects": false,
+	"type": "module",
+	"main": "./dist/crosis4furrets.cjs",
+	"module": "./dist/crosis4furrets.mjs",
+	"exports": {
+		".": {
+			"import": "./dist/crosis4furrets.mjs",
+			"require": "./dist/crosis4furrets.cjs",
+			"default": "./dist/crosis4furrets.cjs"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"lint": "eslint src --config ./eslint.config.json --ext .js",
+		"lint:fix": "eslint src --config ./eslint.config.json --ext .js --fix",
+		"format": "prettier --check . --config ./prettier.config.json",
+		"format:fix": "prettier --write . --config ./prettier.config.json"
+	},
+	"keywords": [],
+	"author": "Ray Arayilakath <rayhanadev@pm.me> (https://rayhanadev.vercel.app)",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/RayhanADev/replit-protocol-conman/issues"
+	},
+	"homepage": "https://github.com/RayhanADev/replit-protocol-conman",
+	"devDependencies": {
+		"eslint": "^7.28.0",
+		"prettier": "^2.3.1"
+	},
+	"dependencies": {
+		"@replit/crosis": "^7.2.0",
+		"@replit/protocol": "^0.2.42",
+		"graphql": "^15.6.1",
+		"graphql-request": "^3.6.1",
+		"lightfetch-node": "^1.1.1"
+	}
+}
